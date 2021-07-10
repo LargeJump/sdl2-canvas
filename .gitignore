@@ -1,0 +1,12 @@
+
+#remova all object files
+*.o
+
+#vscode configuration
+.vscode
+
+#executables
+*.exe
+
+#SDL
+SDL2.dll
