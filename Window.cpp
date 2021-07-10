@@ -18,8 +18,6 @@ Window::Window(int width, int height) {
     cout << "window created\n";
 }
 
-
-
 bool Window::pollEvents(){
     SDL_Event e;
     while(SDL_PollEvent(&e)){

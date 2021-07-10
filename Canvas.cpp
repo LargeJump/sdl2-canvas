@@ -4,6 +4,9 @@
 
 Canvas::Canvas(int w, int h): Window(w,h){
     renderer = SDL_CreateRenderer( Window::window, -1, SDL_RENDERER_ACCELERATED );
+
+    clearCanvas();
+    renderCanvas();
 }
 
 void Canvas::drawRect(int x, int y, int w, int h, SDL_Color color) {
