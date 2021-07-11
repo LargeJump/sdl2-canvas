@@ -1,3 +1,6 @@
+#ifndef CANVAS_H
+#define CANVAS_H
+
 #include "Window.h"
 
 class Canvas : public Window {
@@ -19,3 +22,5 @@ private:
 
     SDL_Renderer *renderer = nullptr;
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef WINDOW_H
+#define WINDOW_H
+
 #include <SDL2/SDL.h>
 
 class Window
@@ -16,3 +19,5 @@ protected:
     int WINDOW_WIDTH;
     int WINDOW_HEIGHT;
 };
+
+#endif
