@@ -22,6 +22,17 @@ public:
         pos.y += v.y;
     };
 
+    bool collision(){
+        if(pos.x < 0 || pos.x + 15 > 600){
+            v.x *= -1;
+        };
+        if(pos.y < 0 || pos.y + 15 > 600){
+            v.y *= -1;
+        };
+
+        return false;
+    }
+
 };
 
 
@@ -46,6 +57,7 @@ int main(int argc, char* args[]){
 
         canvas.clearCanvas();
 
+            box.collision();
             box.update();
             canvas.drawRect(box.pos.x,box.pos.y, { 0xFF, 0x00, 0x00, 0x00 });
 
