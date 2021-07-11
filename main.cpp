@@ -37,27 +37,26 @@ int main(int argc, char* args[]){
     int frameCap = 60;
 
     int frame = 0;
+    int spf = 1000 / frameCap; //sec per frame
 
-    while (canvas.pollEvents())
-    {
+    uint32_t dt = 0;
+    while (canvas.pollEvents()) {
+
         t0 = SDL_GetTicks();
 
-        // update ~ every frameCap fps 
-        if( t0-t1 >= 1000 / frameCap){
-            // cout << "t0 | t1 \t" << t0 << " | " << t1 << "\t" << total <<"\n";
-            canvas.clearCanvas();
+        canvas.clearCanvas();
 
             box.update();
             canvas.drawRect(box.pos.x,box.pos.y, { 0xFF, 0x00, 0x00, 0x00 });
 
-            canvas.renderCanvas();
+        canvas.renderCanvas();
+        frame++;
 
-            t1 = SDL_GetTicks();
-
-            frame++;
-                cout << (double)frame / (t0 / 1000.0f) << "\n";
+        t1 = SDL_GetTicks();
+        //fps limit to frame cap
+        if( (dt=t1-t0) < spf ){
+            SDL_Delay( spf - dt );
         }
-       
 
     }
     
