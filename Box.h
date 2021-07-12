@@ -8,8 +8,8 @@ private:
 
 public:
     Box(){};
-    vec2 v = { 1, 1 };
-    vec2 pos = { 1, 1 };
+    vec2 v = { 3, 5 };
+    vec2 pos = { 50, 1 };
 
     void update(){
         pos.x += v.x;
@@ -25,7 +25,8 @@ public:
         };
 
         return false;
-    }
+    };
+
 
 };
 
