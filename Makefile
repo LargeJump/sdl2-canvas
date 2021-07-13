@@ -4,7 +4,9 @@ CC=g++
 
 OBJ=Window.o main.o Canvas.o
 OUT=phys.exe
-LFLAGS=-lmingw32 -lSDL2main -lSDL2 -Wall
+LFLAGS=-lSDL2main -lSDL2 -Wall
+
+##-lmingw32 
 
 
 all: $(OBJ)
@@ -13,5 +15,11 @@ all: $(OBJ)
 %.o: %.cpp 
 	$(CC) -c $^
 
+#for windows
 clean: 
 	del *.exe *.o
+
+#for linux
+
+clear:
+	rm *.exe *.o
