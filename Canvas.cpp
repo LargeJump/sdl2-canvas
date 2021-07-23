@@ -48,6 +48,10 @@ void Canvas::drawLine(int x1, int y1, int x2, int y2){
     lineColor( renderer, x1, y1, x2, y2, 0xFFFFFFFF );
 }
 
+void Canvas::drawLine(SDL_Point a, SDL_Point b, uint32_t color){
+    lineColor( renderer, a.x, a.y, b.x, b.y, color );
+}
+
 Canvas::~Canvas(){
 
     SDL_DestroyRenderer( renderer );
