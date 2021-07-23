@@ -1,5 +1,8 @@
 
-
+#canvas helper used to develop canvas
 canvas_helper
 
+#temporary makefile do not include
 Makefile
+
+main.cpp

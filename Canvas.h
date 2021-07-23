@@ -2,6 +2,7 @@
 #define CANVAS_H
 
 #include "Window.h"
+#include <SDL2/SDL2_gfxPrimitives.h>
 
 class Canvas : public Window {
 public: 
@@ -12,6 +13,8 @@ public:
     void drawRect(int x, int y, SDL_Color color); //15x15 in size
 
     void drawPoint(int, int, SDL_Color);
+
+    void drawLine(int x1, int y1, int x2, int y2);
 
     void renderCanvas();
     void clearCanvas();
