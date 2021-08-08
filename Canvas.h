@@ -15,7 +15,7 @@ public:
     void drawPoint(int, int, SDL_Color);
 
     void drawLine(int x1, int y1, int x2, int y2);
-    void drawLine(SDL_Point a, SDL_Point b, uint32_t color){
+    void drawLine(SDL_Point a, SDL_Point b, uint32_t color);
 
     void renderCanvas();
     void clearCanvas();
